@@ -24,7 +24,7 @@ export async function getTilesPaginated(
       .select()
       .from(tiles)
       .orderBy(desc(tiles.createdAt))
-      .limit(limit + 1) // Get one extra to check if there are more
+      .limit(limit + 1)
       .offset(offset);
 
     const hasMore = result.length > limit;
